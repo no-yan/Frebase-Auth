@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import initFirebase from "./firebase/initFirebase";
+import SignIn from "./SignIn";
 
-function App() {
+initFirebase();
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-row justify-between m-12 items-center px-6 h-16 bg-yellow-300">
+      <p>hoge</p>
+      <SignIn />
     </div>
   );
-}
+};
 
 export default App;
